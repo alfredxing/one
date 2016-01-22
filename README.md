@@ -1,2 +1,2 @@
-# one
-One Light Atom theme, ported to Sublime Text
+### one
+One Light Atom theme, ported to Sublime Text.
