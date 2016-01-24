@@ -8,6 +8,8 @@ One Light Atom theme, ported to Sublime Text.
 
 #### Sublime UI theme
 
+> **Warning**: The UI theme, although usable, is still a work in progress and therefore incomplete at the moment.
+
 The UI theme (from Atom's [One Light UI](https://github.com/atom/one-light-ui) is contained in the `One Light.sublime-theme` file. Be sure you have a copy of the `One/` directory as well, since this contains the image resources used in the theme.
 
 #### Syntax theme
