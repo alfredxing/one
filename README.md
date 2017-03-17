@@ -18,7 +18,7 @@ The UI theme (from Atom's [One Light UI](https://github.com/atom/one-light-ui) i
 
 #### JavaScript A syntax
 
-Unsatisfied with Sublime's built-in JavaScript syntax definition, I also created an improved version, `JavaScript A`, based on Atom's [JavaScript language pack](https://github.com/atom/language-javascript). A screenshot comparing the native JavaScript syntax and `JavaScript A` can be found [here](Screenshots/JS Comparison.png).
+Unsatisfied with Sublime's built-in JavaScript syntax definition, I also created an improved version, `JavaScript A`, based on Atom's [JavaScript language pack](https://github.com/atom/language-javascript). A screenshot comparing the native JavaScript syntax and `JavaScript A` can be found [here](Screenshots/JS%20Comparison.png).
 
 ---
 
