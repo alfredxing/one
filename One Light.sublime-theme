@@ -25,18 +25,17 @@
     // Tab element
     {
         "class": "tab_control",
-        "content_margin": [12, 0, 10, 0],
+        "content_margin": [12, 0, 8, 0],
         "max_margin_trim": 0,
         "hit_test_level": 0,
         "layer0.texture": "One/One/tabset.png",
-        "layer0.inner_margin": [5, 5],
+        "layer0.inner_margin": [5, 10],
         "layer0.opacity": 1
     },
     // Tab close state
     {
         "class": "tab_control",
         "settings": ["show_tab_close_buttons"],
-        "content_margin": [12, 0, 10, 0]
     },
     // Tab hover state
     {
@@ -55,7 +54,6 @@
         "class": "tab_control",
         "settings": ["!show_tab_close_buttons"],
         "attributes": ["dirty"],
-        "content_margin": [12, 3, 7, 3]
     },
 
 //
@@ -163,28 +161,6 @@
         "class": "tab_label",
         "attributes": ["transient"],
         "font.italic": true
-    },
-
-    // Tab Labels font size
-    {
-        "class": "tab_label",
-        "settings": ["one_tabs_font_small"],
-        "font.size": 10.0
-    },
-    {
-        "class": "tab_label",
-        "settings": ["one_tabs_font_normal"],
-        "font.size": 11.0
-    },
-    {
-        "class": "tab_label",
-        "settings": ["one_tabs_font_large"],
-        "font.size": 12.0
-    },
-    {
-        "class": "tab_label",
-        "settings": ["one_tabs_font_xlarge"],
-        "font.size": 14.0
     },
 
 //
@@ -343,7 +319,7 @@
 
     {
         "class": "sheet_container_control",
-        "layer0.tint": [229, 229, 230], // 05
+        "layer0.tint": [229, 229, 229], // 05
         "layer0.opacity": 1
     },
 
@@ -353,8 +329,9 @@
 
     {
         "class": "grid_layout_control",
-        "border_size": 1,
-        "border_color": [223, 225, 232] // 05
+        "border_size": 0,
+        "border_color": [0, 0, 0], // 05,
+        "content_margin": 0
     },
 
 //
@@ -378,7 +355,7 @@
     // Text field labels
     {
         "class": "label_control",
-        "parents": [{"class": "panel_control"}]
+        "parents": [{"class": "panel_control"}],
     },
     // Button labels
     {
@@ -421,13 +398,22 @@
     // Status bar button
     {
         "class": "status_button",
-        "min_size": [80, 0]
+        "min_size": [80, 0],
+        "content_margin": [0, 4]
     },
     // Status bar label
     {
         "class": "label_control",
         "parents": [{"class": "status_bar"}],
         "color": [66, 66, 67] // 03-04
+    },
+    // Panel switcher
+    {
+        "class": "panel_button_control",
+        "layer0.texture": "One/One/panel-button.png",
+        "layer0.tint": [126, 127, 129], // 04
+        "layer0.opacity": 1,
+        "content_margin": [14, 6],
     },
 
 //
@@ -439,13 +425,13 @@
         "class": "sidebar_container",
         "layer0.texture": "One/One/sidebar.png",
         "layer0.opacity": 1,
-        "layer0.inner_margin": [1,5,2,1],
-        "content_margin": [0,4,0,0]
+        "layer0.inner_margin": [1,40,1,1],
+        "content_margin": [0,4,0,0],
     },
     // Sidebar tree
     {
         "class": "sidebar_tree",
-        "row_padding": [8, 4],
+        "row_padding": [8, 5],
         "indent": 12,
         "indent_offset": 14,
         "indent_top_level": false,
@@ -471,31 +457,6 @@
         "color": [147, 147, 149], // 04
         "font.bold": false
     },
-    {
-        "class": "sidebar_tree",
-        "settings": ["spacegray_sidebar_tree_xsmall"],
-        "row_padding": [8, 0]
-    },
-    {
-        "class": "sidebar_tree",
-        "settings": ["spacegray_sidebar_tree_small"],
-        "row_padding": [8, 2]
-    },
-    {
-        "class": "sidebar_tree",
-        "settings": ["spacegray_sidebar_tree_normal"],
-        "row_padding": [8, 4]
-    },
-    {
-        "class": "sidebar_tree",
-        "settings": ["spacegray_sidebar_tree_large"],
-        "row_padding": [8, 6]
-    },
-    {
-        "class": "sidebar_tree",
-        "settings": ["spacegray_sidebar_tree_xlarge"],
-        "row_padding": [8, 8]
-    },
     // Sidebar heading selected
     {
         "class": "sidebar_heading",
@@ -505,27 +466,8 @@
     // Sidebar entry
     {
         "class": "sidebar_label",
-        "color": [66, 66, 67] // 03-04
-    },
-    {
-        "class": "sidebar_label",
-        "settings": ["spacegray_sidebar_font_small"],
-        "font.size": 10.0
-    },
-    {
-        "class": "sidebar_label",
-        "settings": ["spacegray_sidebar_font_normal"],
+        "color": [66, 66, 67], // 03-04
         "font.size": 11.0
-    },
-    {
-        "class": "sidebar_label",
-        "settings": ["spacegray_sidebar_font_large"],
-        "font.size": 12.0
-    },
-    {
-        "class": "sidebar_label",
-        "settings": ["spacegray_sidebar_font_xlarge"],
-        "font.size": 14.0
     },
     // Sidebar folder entry
     {
@@ -648,26 +590,24 @@
     // Default button state
     {
         "class": "button_control",
-        "content_margin": [4,8,4,8],
-        "min_size": [64,0],
-        "layer0.texture": "",
+        "content_margin": [0, 9],
+        "min_size": [90,0],
+        "layer0.texture": "One/One/button.png",
         "layer0.opacity": 1,
-        "layer0.tint": [223, 225, 232], // 06
-        "layer0.inner_margin": [8,8]
+        "layer0.tint": [255, 255, 255], // 06
+        "layer0.inner_margin": 3,
     },
     // Hover button state
     {
         "class": "button_control",
         "attributes": ["hover"],
-        "layer0.texture": "",
-        "layer0.tint": [230, 233, 240] // 06-07
+        "layer0.texture": "One/One/button-hover.png",
     },
     // Pressed button state
     {
         "class": "button_control",
         "attributes": ["pressed"],
-        "layer0.texture": "",
-        "layer0.tint": [223, 225, 232] // 06
+        "layer0.texture": "One/One/button-active.png",
     },
 //
 // TEXT INPUT FIELD
@@ -676,10 +616,11 @@
     // Text input field item
     {
         "class": "text_line_control",
-        "layer0.texture": "",
-        "layer0.tint": [255, 255, 255], // 06
+        "layer0.texture": "One/One/button.png",
+        "layer0.tint": [250, 250, 250], // 06
         "layer0.opacity": 1,
-        "content_margin": 3
+        "layer0.inner_margin": 3,
+        "content_margin": 6
     },
 
 //
@@ -699,10 +640,10 @@
         "class": "overlay_control",
         "layer0.opacity": 1,
         "layer1.texture": "",
-        "layer1.tint": [223, 225, 232], // 06
+        "layer1.tint": [229, 229, 230], // 06
         "layer1.inner_margin": [0,0,0,0],
         "layer1.opacity": 1,
-        "content_margin": 0
+        "content_margin": 5
     },
 
 //
@@ -711,23 +652,20 @@
 
     {
         "class": "quick_panel",
-        "row_padding": 8,
-        "layer0.tint": [223, 225, 232],
-        "layer0.opacity": 1,
-        "dark_content": true
+        "row_padding": [8, 8, 8, 4],
+        "dark_content": false
     },
     {
         "class": "quick_panel_row",
-        "layer0.texture": "",
-        "layer0.tint": [223, 225, 232], // 06
-        "layer0.inner_margin": 8,
+        "layer0.texture": "One/One/quick.png",
+        "layer0.tint": [250, 250, 250], // 05
+        "layer0.inner_margin": 4,
         "layer0.opacity": 1
     },
     {
         "class": "quick_panel_row",
         "attributes": ["selected"],
-        "layer0.texture": "",
-        "layer0.tint": [192, 197, 206, 255] // 05
+        "layer0.tint": [234,234,235] // 05
     },
     {
         "class": "quick_panel_label",
@@ -755,15 +693,15 @@
 
     {
         "class": "mini_quick_panel_row",
-        "layer0.texture": "",
-        "layer0.tint": [223, 225, 232], // 06
+        "layer0.texture": "One/One/quick.png",
+        "layer0.tint": [250, 250, 250], // 06
+        "layer0.inner_margin": 3,
         "layer0.opacity": 1
     },
     {
         "class": "mini_quick_panel_row",
         "attributes": ["selected"],
-        "layer0.texture": "",
-        "layer0.tint": [192, 197, 206] // 05
+        "layer0.tint": [234,234,235] // 05
     },
 
 //
@@ -808,6 +746,7 @@
     {
         "class": "icon_button_control",
         "layer1.texture": "",
+        "layer1.tint": [255, 255, 255],
         "layer1.opacity": 0,
         "content_margin": 7
     },
@@ -1018,7 +957,7 @@
         "class": "disclosure_button_control",
         "settings": ["spacegray_color_expanded_folder"],
         "attributes": ["expanded"],
-        "layer0.tint": [254, 204, 102] // 0A
+        "layer0.tint": [135, 141, 154] // 0A
     },
 
 //
@@ -1030,26 +969,6 @@
         "class": "tabset_control",
         "settings": ["spacegray_tabs_auto_width"],
         "tab_width": 0
-    },
-    {
-        "class": "tabset_control",
-        "settings": ["spacegray_tabs_small"],
-        "tab_height": 22
-    },
-    {
-        "class": "tabset_control",
-        "settings": ["spacegray_tabs_normal"],
-        "tab_height": 28
-    },
-    {
-        "class": "tabset_control",
-        "settings": ["spacegray_tabs_large"],
-        "tab_height": 34
-    },
-    {
-        "class": "tabset_control",
-        "settings": ["spacegray_tabs_xlarge"],
-        "tab_height": 40
     },
 
 //
