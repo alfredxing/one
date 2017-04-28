@@ -169,7 +169,7 @@
 
     {
         "class": "fold_button_control",
-        "layer0.texture": "One/Spacegray/folder-closed.png",
+        "layer0.texture": "One/Spacegray/fold-right.png",
         "layer0.tint": [167, 173, 186], // 04
         "layer0.opacity": 0.5,
         "layer0.inner_margin": 0,
@@ -183,7 +183,7 @@
     {
         "class": "fold_button_control",
         "attributes": ["expanded"],
-        "layer0.texture": "One/Spacegray/folder-open.png"
+        "layer0.texture": "One/Spacegray/fold-down.png"
     },
     {
         "class": "fold_button_control",
@@ -551,7 +551,7 @@
     {
         "class": "disclosure_button_control",
         "content_margin": [8,8],
-        "layer0.texture": "One/Spacegray/folder-closed.png",
+        "layer0.texture": "One/Spacegray/fold-right.png",
         "layer0.tint": [167, 173, 186], // 04
         "layer0.opacity": 1,
         "layer0.inner_margin": 0
@@ -569,7 +569,7 @@
     {
         "class": "disclosure_button_control",
         "attributes": ["expanded"],
-        "layer0.texture": "One/Spacegray/folder-open.png"
+        "layer0.texture": "One/Spacegray/fold-down.png"
     },
     {
         "class": "disclosure_button_control",
@@ -580,7 +580,7 @@
         "class": "disclosure_button_control",
         "attributes": ["expanded"],
         "parents": [{"class": "tree_row","attributes": ["selected"]}],
-        "layer0.texture": "One/Spacegray/folder-open.png"
+        "layer0.texture": "One/Spacegray/fold-down.png"
     },
 
 //
