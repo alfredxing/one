@@ -1,0 +1,225 @@
+{
+	"name": "One Light New",
+	"variables": {
+		"white": "#fafafa",
+		"caret": "#526fff",
+		"black": "#383a42",
+		"lightgray": "#d5d6d7",
+		"midgray": "#ededed",
+		"gray": "#a0a1a7",
+
+		"gold": "#c18401",
+		"brown": "#986801",
+		"blue": "#4078f2",
+		"cyan": "#0184bc",
+		"green": "#50a14f",
+		"red": "#e45649",
+		"brightred": "#ca1243",
+		"magenta": "#a626a4",
+	},
+	"globals": {
+		"background": "var(white)",
+		"foreground": "var(black)",
+		"caret": "var(caret)",
+		"invisibles": "var(lightgray)",
+
+		"line_highlight": "color(var(black) alpha(0.05))",
+		"selection": "var(midgray)",
+		"selection_border_width": "0",
+		"highlight": "color(var(caret) alpha(0.5))",
+		"find_highlight": "color(var(caret) alpha(0.5))",
+
+		"active_guide": "#9D550FB0",
+
+		"brackets_options": "underline",
+		"tags_options": "stippled_underline",
+	},
+	"rules": [
+		{
+			"scope": "comment",
+			"foreground": "var(gray)",
+			"font_style": "italic",
+		},
+
+		{
+			"scope": "entity.name.type",
+			"foreground": "var(gold)",
+		},
+		{
+			"scope": "entity.name.class, entity.name.type.class",
+			"foreground": "var(gold)",
+		},
+		{
+			"scope": "entity.name.function",
+			"foreground": "var(blue)",
+		},
+		{
+			"scope": "entity.name.section",
+			"foreground": "var(blue)",
+		},
+		{
+			"scope": "entity.name.tag",
+			"foreground": "var(red)",
+		},
+		{
+			"scope": "entity.other.attribute-name",
+			"foreground": "var(brown)",
+			"font_style": "italic",
+		},
+		{
+			"scope": "entity.other.attribute-name.id",
+			"foreground": "var(blue)",
+		},
+		{
+			"scope": "entity.other.inherited-class",
+			"foreground": "var(gold)",
+		},
+		{
+			"scope": "entity.other.pseudo-class",
+			"foreground": "var(blue)",
+		},
+		{
+			"scope": "entity.other.less.mixin",
+			"foreground": "var(blue)",
+		},
+
+		{
+			"scope": "variable",
+			"foreground": "var(black)",
+		},
+		{
+			"scope": "source.less variable",
+			"foreground": "var(red)",
+		},
+		{
+			"scope": "variable.language",
+			"foreground": "var(red)",
+		},
+		{
+			"scope": "variable.interpolation",
+			"foreground": "var(brightred)",
+		},
+		{
+			"scope": "variable.function",
+			"foreground": "var(blue)",
+		},
+		{
+			"scope": "variable.other.class",
+			"foreground": "var(gold)",
+		},
+		{
+			"scope": "variable.other.constant",
+			"foreground": "var(brown)",
+		},
+
+		{
+			"scope": "constant",
+			"foreground": "var(brown)",
+		},
+		{
+			"scope": "constant.numeric",
+			"foreground": "var(brown)",
+		},
+		{
+			"scope": "constant.language",
+			"foreground": "var(cyan)",
+		},
+		{
+			"scope": "constant.character.escape",
+			"foreground": "var(cyan)",
+		},
+		{
+			"scope": "constant.other.color",
+			"foreground": "var(cyan)",
+		},
+		{
+			"scope": "constant.other.symbol",
+			"foreground": "var(cyan)",
+		},
+
+		{
+			"scope": "storage",
+			"foreground": "var(magenta)",
+		},
+
+		{
+			"scope": "support",
+			"foreground": "var(gold)",
+		},
+		{
+			"scope": "support.type, support.function",
+			"foreground": "var(cyan)",
+		},
+		{
+			"scope": "support.function.any-method",
+			"foreground": "var(blue)",
+		},
+		{
+			"scope": "support.type.property-name.css",
+			"foreground": "var(black)",
+		},
+
+		{
+			"scope": "keyword",
+			"foreground": "var(magenta)",
+		},
+		{
+			"scope": "keyword.operator",
+			"foreground": "var(magenta)",
+		},
+		{
+			"scope": "keyword.operator.module",
+			"foreground": "var(cyan)",
+		},
+		{
+			"scope": "keyword.operator.word",
+			"foreground": "var(brown)",
+		},
+		{
+			"scope": "keyword.other.template",
+			"foreground": "var(green)",
+		},
+		{
+			"scope": "keyword.other.special-method",
+			"foreground": "var(blue)",
+		},
+		{
+			"scope": "keyword.other.unit",
+			"foreground": "var(brown)",
+		},
+
+		{
+			"scope": "string",
+			"foreground": "var(green)",
+		},
+		{
+			"scope": "string.regexp",
+			"foreground": "var(cyan)",
+		},
+
+		{
+			"scope": "invalid",
+			"foreground": "var(brightred)",
+			"font_style": "bold",
+		},
+		{
+			"scope": "invalid.deprecated",
+			"foreground": "var(gold)",
+			"font_style": "bold",
+		},
+
+		{
+			"scope": "meta.definition.variable",
+			"foreground": "var(red)",
+		},
+
+		{
+			"scope": "punctuation.comment",
+			"foreground": "var(gray)",
+		},
+		{
+			"scope": "punctuation.definition.tag.begin.jsx, punctuation.definition.tag.end.jsx",
+			"foreground": "var(brown)",
+		},
+	],
+}

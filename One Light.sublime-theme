@@ -12,7 +12,7 @@
         "layer0.opacity": 1,
         "content_margin": [-1, 0, 0, 0],
         "tab_overlap": 0,
-        "tab_width": 200,
+        "tab_width": 240,
         "tab_min_width": 48,
         "tab_height": 30,
         "mouse_wheel_switch": false
@@ -146,7 +146,8 @@
         "class": "tab_label",
         "fade": true,
         "fg": [147, 147, 149], // 03
-        "font.size": 11.0
+        "font.face": ".SFNSText-Regular",
+        "font.size": 12
     },
     {
         "class": "tab_label",
@@ -443,7 +444,7 @@
         "layer0.texture": "",
         "layer0.tint": [126, 127, 129, 20], // 05
         "layer0.opacity": 0,
-        "layer0.inner_margin": [1,1]
+        "layer0.inner_margin": [1,1],
     },
     // Sidebar row selected
     {
@@ -455,6 +456,8 @@
     {
         "class": "sidebar_heading",
         "color": [147, 147, 149], // 04
+        "font.face": ".SFNSText-Regular",
+        "font.size": 12,
         "font.bold": false
     },
     // Sidebar heading selected
@@ -467,7 +470,8 @@
     {
         "class": "sidebar_label",
         "color": [66, 66, 67], // 03-04
-        "font.size": 11.0
+        "font.face": ".SFNSText-Regular",
+        "font.size": 12
     },
     // Sidebar folder entry
     {
