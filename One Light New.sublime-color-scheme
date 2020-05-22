@@ -111,6 +111,10 @@
 			"scope": "variable.other.constant",
 			"foreground": "var(brown)",
 		},
+		{
+			"scope": "variable.other.less",
+			"foreground": "var(red)",
+		},
 
 		{
 			"scope": "constant",
