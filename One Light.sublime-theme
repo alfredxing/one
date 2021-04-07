@@ -11,13 +11,14 @@
 		"sidebar_row_selected": "#dbdbdc",
 		"sidebar_label": "var(one-fg)",
 		"sidebar_label_selected": "#232324",
+		"status_bar_bg": "var(one-bg)",
 	},
 	"rules": [
 		// Sidebar
 		{
 			"class": "sidebar_container",
 			"layer1.texture": "One/textures/sidebar.png",
-			"layer1.inner_margin": 1,
+			"layer1.inner_margin": 2,
 			"layer1.draw_center": false,
 			"layer1.opacity": 1,
 		},
@@ -30,6 +31,10 @@
 			"case": "title",
 			"font.bold": false,
 			"shadow_color": "transparent",
+		},
+		{
+			"class": "icon_file_type",
+			"layer0.tint": "red",
 		},
 
 		// Tabset
@@ -64,7 +69,8 @@
 			"layer3.tint": "var(one-bg)",
 			"tint_index": 1,
 			"tint_modifier": "transparent",
-			"content_margin": [14, 3, 9, 4],
+			"content_margin": [20, 0, 12, 0],
+			"max_margin_trim": 10,
 			"hit_test_level": 0.3
 		},
 		{
@@ -74,14 +80,18 @@
 		},
 		{
 			"class": "tab_control",
-			"attributes": ["selected", "!left"],
+			"attributes": ["selected"],
 			"layer1.opacity": 1.0,
 			"layer2.texture": "One/textures/tab-selected.png",
 		},
 		{
 			"class": "tab_control",
 			"attributes": ["selected", "left"],
-			"layer1.opacity": 1.0,
+			"layer2.texture": "One/textures/tab-selected-left.png",
+		},
+		{
+			"class": "tab_control",
+			"attributes": ["selected", "right_of_selected"],
 			"layer2.texture": "One/textures/tab-selected-left.png",
 		},
 		{
@@ -99,6 +109,23 @@
 			"class": "quick_panel",
 			"layer0.tint": "#FFF",
 			"row_padding": [8, 6],
-		}
+		},
+
+		// Status bar
+		{
+			"class": "status_bar",
+			"content_margin": [10, 5],
+			"layer1.texture": "One/textures/status-bar.png",
+			"layer1.opacity": 1,
+			"layer1.draw_center": false,
+			"layer1.inner_margin": 2,
+		},
+		{
+			"class": "label_control",
+			"parents": [{"class": "status_bar"}],
+			"font.size": "var(font_size_sm)",
+			"shadow_color": "transparent",
+			"shadow_offset": [0, 0]
+		},
 	],
 }
