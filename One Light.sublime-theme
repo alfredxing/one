@@ -1,0 +1,104 @@
+{
+	"extends": "Default.sublime-theme",
+	"variables": {
+		"one-bg": "#eaeaeb",
+		"one-fg": "#424243",
+
+		"base_hue": "var(one-bg)",
+		"ui_bg": "var(one-bg)",
+		"text_fg": "var(one-fg)",
+		"sidebar_bg": "var(one-bg)",
+		"sidebar_row_selected": "#dbdbdc",
+		"sidebar_label": "var(one-fg)",
+		"sidebar_label_selected": "#232324",
+	},
+	"rules": [
+		// Sidebar
+		{
+			"class": "sidebar_container",
+			"layer1.texture": "One/textures/sidebar.png",
+			"layer1.inner_margin": 1,
+			"layer1.draw_center": false,
+			"layer1.opacity": 1,
+		},
+		{
+			"class": "sidebar_tree",
+			"row_padding": [16, 5, 5, 3],
+		},
+		{
+			"class": "sidebar_heading",
+			"case": "title",
+			"font.bold": false,
+			"shadow_color": "transparent",
+		},
+
+		// Tabset
+		{
+			"class": "tabset_control",
+			"tab_overlap": 0,
+			"tab_height": 30,
+			"connector_height": 0,
+			"spacing": 0,
+			"layer0.tint": "var(one-bg)",
+			"layer1.texture": "One/textures/tabset.png",
+			"layer1.opacity": 1,
+			"layer1.draw_center": false,
+			"layer1.inner_margin": 1,
+		},
+
+		// Tabs
+		{
+			"class": "tab_control",
+			"layer0.opacity": 1.0,
+			"layer0.texture": "",
+			"layer0.tint": "var(one-bg)",
+			"layer1.tint": "var(one-bg)",
+			"layer1.texture": "",
+			"layer1.opacity": 0,
+			"layer2.texture": "One/textures/tabset.png",
+			"layer2.opacity": 1,
+			"layer2.draw_center": false,
+			"layer2.inner_margin": 2,
+			"layer2.tint": "white",
+			"layer3.texture": "",
+			"layer3.tint": "var(one-bg)",
+			"tint_index": 1,
+			"tint_modifier": "transparent",
+			"content_margin": [14, 3, 9, 4],
+			"hit_test_level": 0.3
+		},
+		{
+			"class": "tab_control",
+			"attributes": ["!selected", "!left_of_selected"],
+			"layer2.texture": "One/textures/tab-border.png",
+		},
+		{
+			"class": "tab_control",
+			"attributes": ["selected", "!left"],
+			"layer1.opacity": 1.0,
+			"layer2.texture": "One/textures/tab-selected.png",
+		},
+		{
+			"class": "tab_control",
+			"attributes": ["selected", "left"],
+			"layer1.opacity": 1.0,
+			"layer2.texture": "One/textures/tab-selected-left.png",
+		},
+		{
+			"class": "tab_label",
+			"font.size": "var(font_size)",
+		},
+
+		// Overlay
+		{
+			"class": "overlay_control",
+			"layer0.tint": "var(one-bg)",
+			"content_margin": 10,
+		},
+		{
+			"class": "quick_panel",
+			"layer0.tint": "#FFF",
+			"row_padding": [8, 6],
+		}
+	],
+}
